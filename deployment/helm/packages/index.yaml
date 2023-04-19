@@ -3,12 +3,12 @@ entries:
   nebula-studio:
   - apiVersion: v2
     appVersion: v3.0.0
-    created: "2023-04-19T10:59:35.659977-04:00"
+    created: "2023-04-19T11:13:22.098665-04:00"
     description: A Helm chart for nebula-studio
     digest: 27f19b65b42e57f48b846c7560c5526d15ee2976f01ffdc1f2b8b10e5db25efb
     name: nebula-studio
     type: application
     urls:
-    - nebula-studio-0.1.2.tgz
+    - packages/nebula-studio-0.1.2.tgz
     version: 0.1.2
-generated: "2023-04-19T10:59:35.656148-04:00"
+generated: "2023-04-19T11:13:22.097503-04:00"
