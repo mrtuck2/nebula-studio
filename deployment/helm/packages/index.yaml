@@ -1,3 +1,28 @@
 apiVersion: v1
-entries: {}
-generated: "2023-04-19T12:13:03.217854-04:00"
+entries:
+  nebula-studio:
+  - apiVersion: v2
+    appVersion: v3.0.0
+    created: "2023-04-19T13:24:54.410463-04:00"
+    description: A Helm chart for nebula-studio
+    digest: 7ce1cd157f4e68c687768976a4c9ac90fc70969112d7fb78ad7ac52aa22b5b9a
+    name: nebula-studio
+    sources:
+    - https://mrtuck2.github.io/nebula-studio/
+    type: application
+    urls:
+    - nebula-studio-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: v3.0.0
+    created: "2023-04-19T13:24:54.410945-04:00"
+    description: A Helm chart for nebula-studio
+    digest: eb1cc55801cc3807cb423eb4b6d296cbf6a67678c484cc4c7ebac18fe5cae75e
+    name: nebula-studio
+    sources:
+    - https://mrtuck2.github.io/nebula-studio/
+    type: application
+    urls:
+    - packages/nebula-studio-0.1.2.tgz
+    version: 0.1.2
+generated: "2023-04-19T13:24:54.409035-04:00"
