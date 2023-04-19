@@ -42,3 +42,5 @@ jobs:
         run: bash ./source/nebula-graph-studio/scripts/pack.sh ${{ secrets.ga_id }} ${{ secrets.clarity_id }} ${{ matrix.os }}
       - name: Upload to OSS
         run: bash ./source/nebula-graph-studio/scripts/upload.sh ${{ secrets.oss_endpoint }} ${{ secrets.oss_id }} ${{ secrets.oss_secret }} ${{ secrets.oss_url }} ${{ matrix.os }}
+
+        helm repo add nebula-studio https://mrtuck2.github.io/nebula-studio/deployment/    

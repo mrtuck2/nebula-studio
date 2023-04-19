@@ -22,7 +22,7 @@ jobs:
           CLOUD_GH_PAT: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global url."https://${GITHUB_TOKEN}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
-          export GOPRIVATE="github.com/vesoft-inc"
+          export GOPRIVATE="github.com/mrtuck1"
       - name: auto cherry pick
         uses: xigongdaEricyang/cherry-pick-robot@with-python
         with:

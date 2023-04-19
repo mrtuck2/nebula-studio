@@ -1,0 +1,41 @@
+name: Release Charts
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    # depending on default permission settings for your org (contents being read-only or read-write for workloads), you will have to add permissions
+    # see: https://docs.github.com/en/actions/security-guides/automatic-token-authentication#modifying-the-permissions-for-the-github_token
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: custom packaging
+        run: |
+          VERSION=${{github.ref_name}}
+          echo "VERSION=${VERSION:1}" >> $GITHUB_ENV
+          rm -rf .cr-release-packages
+          mkdir -p .cr-release-packages
+          helm package charts/nebula --app-version=${VERSION:1} --version=${VERSION:1} --destination=.cr-release-packages
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+
+      - name: Install Helm
+        uses: azure/setup-helm@v3
+# makes sure does not do packaging step
+      - name: Run chart-releaser
+        uses: mrtuck2/chart-releaser-action@vskip-packagin-option
+        with:
+          skip_packaging: true
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
