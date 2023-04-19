@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   pullPolicy: IfNotPresent
   nebulaStudio:
-    name: vesoft/nebula-graph-studio
+    name: mrtuck1/nebula-studio
     version: v3.6.0
 
 imagePullSecrets: []
@@ -36,3 +36,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+
+
+
